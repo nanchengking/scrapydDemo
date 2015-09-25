@@ -28,6 +28,7 @@ class demozSpider(scrapy.Spider):
             if self.num>=self.wanted_num:
                 return 
             yield item
-
+            
+          
         
 
