@@ -8,14 +8,16 @@ from BeautifulSoup import BeautifulSoup
 import logging
 import scrapy
 from scrapydDemo.items import  *
-class demozSpider(scrapy.Spider):
-    name="dmoz"
+class Spider_One(scrapy.Spider):
+    name="Spider_One"
     allowed_domains = ["baidu.com"]
     start_urls = [
        "http://tieba.baidu.com/f?kw=嘉祥一中&ie=utf-8&tab=good&cid=7"
+       ,"http://tieba.baidu.com/f?kw=%E5%98%89%E7%A5%A5%E4%B8%80%E4%B8%AD&ie=utf-8&tab=good&cid=2"
+       ,"http://tieba.baidu.com/f?kw=%E5%98%89%E7%A5%A5%E4%B8%80%E4%B8%AD&ie=utf-8&tab=good&cid=6"
     ] 
     def parse(self,response):
-        logging.info("==爬虫dmoz的 parse start!==")
+        logging.info("==爬虫Spider_One 的 parse start!==")
         self.num=0
         self.wanted_num=5
         item=TieziItem()

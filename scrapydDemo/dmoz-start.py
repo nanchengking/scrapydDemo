@@ -11,6 +11,7 @@ print req
 res_data=urllib2.urlopen(req)
 res=res_data.read()
 print res
+
 t=raw_input()
 if(t=='q'):
     print "退出"

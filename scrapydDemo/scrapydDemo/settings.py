@@ -13,6 +13,15 @@ BOT_NAME = 'scrapydDemo'
 
 SPIDER_MODULES = ['scrapydDemo.spiders']
 NEWSPIDER_MODULE = 'scrapydDemo.spiders'
+#图片存储的地址
+IMAGES_STORE = 'path/images'
+#f防止下载重复图片
+IMAGES_EXPIRES = 30
+#图片的略缩图
+IMAGES_THUMBS = {
+    'small': (50, 50),
+    'big': (270, 270),
+}
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -62,8 +71,10 @@ NEWSPIDER_MODULE = 'scrapydDemo.spiders'
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'scrapydDemo.pipelines.ScrapyddemoPipeline': 100,
+    'scrapydDemo.pipelines.ScrapyddemoPipeline': 1,
+    'scrapydDemo.pipelines.ImagePipeline': 2,
 }
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

@@ -7,7 +7,6 @@
 
 import scrapy
 
-
 class ScrapyddemoItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
@@ -17,3 +16,6 @@ class TieziItem(scrapy.Item):
     author=scrapy.Field()
     content=scrapy.Field()
     title=scrapy.Field()
+class ImageItem(scrapy.Item):
+    image_urls=scrapy.Field()
+    image=scrapy.Field()
