@@ -1,8 +1,6 @@
 *.pyc
 /*.pyc
-/scrapydDemo/*.pyc
-/scrapydDemo/spiders/*.pyc
-/.settings
-.settings
+/.settings/
+/.idea/
 *.html*
 *.txt*

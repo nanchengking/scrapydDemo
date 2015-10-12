@@ -18,7 +18,6 @@ class ScrapyddemoPipeline(object):
         self.tieba.insert_one(dict(item))
         return item
     def open_spider(self,spider):
-   # if isinstance(spider, Spider_One):
         logging.info("==open_spider调用成功==")
         self.connect_mongodb()
     def close_spider(self,spider):

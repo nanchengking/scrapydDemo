@@ -71,8 +71,8 @@ IMAGES_THUMBS = {
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'scrapydDemo.pipelines.ScrapyddemoPipeline': 1,
-    'scrapydDemo.pipelines.ImagePipeline': 2,
+    'scrapydDemo.pipelines.ScrapyddemoPipeline': 2,
+    'scrapydDemo.pipelines.ImagePipeline': 1,
 }
 
 
